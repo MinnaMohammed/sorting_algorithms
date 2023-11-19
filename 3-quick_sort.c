@@ -18,6 +18,7 @@ void swap_values(int *num2, int *num1)
 /**
  * partition - divides the given array into 2 partitions
  *
+ *@array: input array
  *@low: first element
  *@high: last element
  *@size: size of the given array
@@ -43,7 +44,7 @@ size_t partition(int *array, size_t low, size_t high, size_t size)
 	}
 	if (array[i] != array[j])
 	{
-		swap_values(array + i,array + high);
+		swap_values(array + i, array + high);
 		print_array(array, size);
 	}
 	return (i);
@@ -52,6 +53,7 @@ size_t partition(int *array, size_t low, size_t high, size_t size)
 /**
  * quick - recursive function that splits the array recursively
  *
+ *@array: input array
  *@start: first element
  *@end: last element
  *@size: size of the input list
@@ -76,7 +78,7 @@ void quick(int *array, size_t start, size_t end, size_t size)
  *@array: input list
  *@size: size of the input list
 */
-void quick_sort(int * array, size_t size)
+void quick_sort(int *array, size_t size)
 {
 	if (!array || size < 2)
 		return;
