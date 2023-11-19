@@ -1,6 +1,19 @@
 #include "sort.h"
 
+/**
+ * swap_values - swaps 2 numbers
+ *
+ *@num1: first number
+ *@num2: second number
+*/
+void swap_values(int *num2, int *num1)
+{
+	int tmp;
 
+	tmp = *num1;
+	*num1 = *num2;
+	*num2 = tmp;
+}
 
 /**
  * bubble_sort - sorts an array of integers in ascending order
